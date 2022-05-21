@@ -1,0 +1,20 @@
+.text-one{
+    font-size:25px;
+    color:var(--black-color);
+  }
+  .text-two{
+    color:var(--black-color);
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+  }
+  .text-three{
+    font-size: 40px;
+    margin:5px 0;
+    color:var(--primary-color);
+  }
+  .text-four{
+    font-size: 23px;
+    margin:5px 0;
+    color:var(--black-color);
+  }
