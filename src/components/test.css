@@ -1,20 +1,30 @@
-.text-one{
-    font-size:25px;
-    color:var(--black-color);
-  }
-  .text-two{
-    color:var(--black-color);
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-  }
-  .text-three{
-    font-size: 40px;
-    margin:5px 0;
-    color:var(--primary-color);
-  }
-  .text-four{
-    font-size: 23px;
-    margin:5px 0;
-    color:var(--black-color);
-  }
+.text-one {
+  font-size: 25px;
+  color: var(--black-color);
+}
+.text-two {
+  color: var(--black-color);
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.text-three {
+  font-size: 40px;
+  margin: 5px 0;
+  color: var(--primary-color);
+}
+.text-four {
+  font-size: 15px;
+  color: var(--black-color);
+}
+
+.heading {
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -1,12 +1,15 @@
+import { MotionConfig } from 'framer-motion'
 import React from 'react'
 import back from '../cardBack.png'
+import {  motion } from 'framer-motion';
 
-export const Card = ({title}) => {
+export const Card = ({title, click}) => {
   return (
-    <div className="card" style={Style}>
-        <img src = {back} height = "100%"></img>
+    <motion.div className="card" style={Style} onMouseUp = {click}
+    drag >
+        <img className='selector' src = {back} height = "100%"></img>
         <div style={TitleText}>{title}</div>
-    </div>
+    </motion.div>
   )
 }
 

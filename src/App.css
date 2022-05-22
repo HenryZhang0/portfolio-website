@@ -1,22 +1,124 @@
+@import-normalize;
 .App {
-  text-align: center;
   display: flex;
 }
 
 body {
   background-color:#eaffd0;
 }
+.selector {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
  
 .cardHolder {
   display: flex;
   flex-direction: column;
-  height: 1000px;
-  width: 30%;
+  height: 100vh;
+  width: 10vw;
+  justify-content: center;
+  border: 1px solid red;
 }
 .content {
   display: flex;
+  flex-direction: row;
+  width: 45vw;  
+  height: 100vh;
+  justify-content: center;
+  align-items:flex-end;
+}
+
+.leftsidebar {
+  display: flex;
   flex-direction: column;
-  width: 70%;
   align-items: center;
+  width: 5vw;
+  height: 100vh;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
   border: 1px solid red;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 9px;
+}
+.vl {
+  border-left: 2px solid black;
+  height: 16vh;
+
+  display: inline-block;
+}
+.sbtop {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sbbottom{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sidetextl {
+  padding-bottom: 1.6vw;
+  writing-mode: vertical-rl; /**makes writing vertical**/
+  text-orientation: mixed; /**orients text sideways**/
+  -webkit-transform: rotate(180deg);    
+  font-family: 'Palanquin Dark', sans-serif;
+  text-align: center;
+}
+
+.model {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid red;
+}
+hr{
+  width: 15%;
+  height: 10px;
+  margin: 5px;
+  margin-left: 70px;
+  background-color: red;
+
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 60vh;
+  border: 1px solid red;
+  background-color: blue;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
