@@ -14,15 +14,6 @@ body {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
- 
-.cardHolder {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 10vw;
-  justify-content: center;
-  border: 1px solid red;
-}
 .content {
   display: flex;
   flex-direction: row;
@@ -37,7 +28,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 5vw;
-  height: 100vh;
+  height: 93vh;
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -75,15 +66,30 @@ body {
   font-family: 'Palanquin Dark', sans-serif;
   text-align: center;
 }
-
+.right-section {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
 .model {
-  width: 40vw;
+  width: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid red;
 }
+ 
+.cardHolder {
+  display: flex;
+  flex-direction: row;
+  height: 30vh;
+  width: 100%;
+  justify-content: center;
+  border: 1px solid red;
+}
+
 hr{
   width: 15%;
   height: 10px;
@@ -92,7 +98,18 @@ hr{
   background-color: red;
 
 }
-
+.contact {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 90vw;
+  top: 2vh;
+}
 .title {
   display: flex;
   flex-direction: row;
@@ -100,7 +117,7 @@ hr{
   justify-content: space-between;
   color: black;
   font-family: "Raleway", sans-serif;
-  font-size: 62px;
+  font-size: 50px;
   font-weight: 800;
   line-height: 72px;
   margin: 0 0 24px;
@@ -114,7 +131,7 @@ hr{
   width: 40vw;
   height: 60vh;
   border: 1px solid red;
-  background-color: blue;
+  background-color: ;
 }
 
 .main-content {

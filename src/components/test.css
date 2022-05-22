@@ -1,5 +1,5 @@
 .text-one {
-  font-size: 25px;
+  font-size: 15px;
   color: var(--black-color);
 }
 .text-two {
@@ -13,15 +13,21 @@
   margin: 5px 0;
   color: var(--primary-color);
 }
+@font-face { 
+  font-family:"Helvetica Now Display DW";
+  font-weight:500;
+  font-style:normal;
+  src:url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot');
+  src:url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot?#iefix') format('embedded-opentype'), url('https://watracz.com/assets/fonts/https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.woff2') format('woff2'), url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.ttf') format('truetype'), url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.svg#wf') format('svg');
+} 
 .text-four {
-  font-size: 15px;
-  color: var(--black-color);
+  font-size:30px;
 }
 
 .heading {
   color: black;
-  font-family: "Raleway", sans-serif;
-  font-size: 62px;
+  
+  font-size: 40px;
   font-weight: 800;
   line-height: 72px;
   margin: 0 0 24px;

@@ -6,7 +6,8 @@ import {  motion } from 'framer-motion';
 export const Card = ({title, click}) => {
   return (
     <motion.div className="card" style={Style} onMouseUp = {click}
-    drag >
+    drag whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}>
         <img className='selector' src = {back} height = "100%"></img>
         <div style={TitleText}>{title}</div>
     </motion.div>

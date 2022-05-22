@@ -1,9 +1,15 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const Content = () => {
+const Content = ({ children }) => {
   return (
-    <div></div>
+    <motion.div className='content'
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
+      exit={{ scaleY: 0 }}
+      transition={{ duration: 0.5 }}>
+      {children}
+    </motion.div>
   )
 }
 
