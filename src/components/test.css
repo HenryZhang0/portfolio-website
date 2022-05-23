@@ -14,25 +14,61 @@
   margin: 5px 0;
   color: var(--primary-color);
 }
-@font-face { 
-  font-family:"Helvetica Now Display DW";
-  font-weight:500;
-  font-style:normal;
-  src:url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot');
-  src:url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot?#iefix') format('embedded-opentype'), url('https://watracz.com/assets/fonts/https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.woff2') format('woff2'), url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.ttf') format('truetype'), url('https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.svg#wf') format('svg');
-} 
+@font-face {
+  font-family: "Helvetica Now Display DW";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot");
+  src: url("https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://watracz.com/assets/fonts/https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.woff2")
+      format("woff2"),
+    url("https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.ttf")
+      format("truetype"),
+    url("https://watracz.com/assets/fonts/webfonts/3AAC62_2_0.svg#wf")
+      format("svg");
+}
 .text-four {
-  font-size:30px;
-  color: #fd8e32;
+  font-size: 20px;
+  color: #c8cdf2;
+  font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  line-height: 23px;
 }
 
 .heading {
   color: black;
-  
-  font-size: 40px;
+
+  font-size: 20px;
   font-weight: 800;
   line-height: 72px;
   margin: 0 0 24px;
   text-align: center;
   text-transform: uppercase;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.about-content {
+  display: flex;
+  flex-direction: row;
+}
+.big {
+  font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+}
+.color2{
+  color: #fc4422;
 }

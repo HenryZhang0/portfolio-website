@@ -19,9 +19,9 @@ body {
   display: flex;
   flex-direction: row;
   width: 45vw;  
-  height: 100vh;
   justify-content: center;
-  align-items:flex-end;
+  align-items:flex-start;
+  padding-top: 20vh;
 }
 
 .leftsidebar {
@@ -88,7 +88,6 @@ body {
   flex-direction: row;
   height: 30vh;
   width: 100%;
-  justify-content: center;
   align-items: center;
   border: 0px solid red;
 }
@@ -101,32 +100,21 @@ hr{
   background-color: #fc4422;
   border: 0px;
 }
+.topbar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
 .contact {
-  color: white;
-  border: 2px solid white;
-  border-radius: 10px;
-  width: 60px;
-  height: 30px;
+  color: #ffc8ba;
+  border: 1.1px solid #ffc8ba;
+  border-radius: 4px;
+  width: 80px;
+  height: 35px;
   display:flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 90vw;
-  top: 2vh;
-}
-.title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  font-size: 50px;
-  font-weight: 800;
-  line-height: 72px;
-  margin: 0 0 24px;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 .panel {

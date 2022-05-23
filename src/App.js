@@ -28,7 +28,7 @@ function App() {
     <AnimatePresence exitBeforeEnter >
       <div className="App">
         <Leftsidebar></Leftsidebar>
-        <Contact></Contact>
+        {/* <Contact></Contact> */}
         <div className="content" id="poo">
           <Routes>
             <Route exact path="/" element={<Homepage />} />
@@ -44,19 +44,47 @@ function App() {
             animate={{ scaleY: 1 }}
             exit={{ scaleY: 0 }}
             transition={{ duration: 0.5 }}>*/}
-            <Routes>
-              <Route exact path="/" element={<></>} />
-              <Route exact path="about" element={<Projector item={<Pizza/>} name = "pizza" id = "a"/>} />
-              <Route exact path="projects" element={<Projector item={<Portalgun/>} name = "Portal gun" id = "aa"/>} />
-              <Route exact path="experience" element={<Projector item={<Keyboard/>} name = "Keyboard" />} />
-            </Routes>
-              
+          <Routes>
+            <Route exact path="/" element={<Projector />} />
+            <Route exact path="about" element={<Projector item={<Pizza />} name="pizza" id="a" />} />
+            <Route exact path="projects" element={<Projector item={<Portalgun />} name="Portal gun" id="aa" />} />
+            <Route exact path="experience" element={<Projector item={<Keyboard />} name="Keyboard" />} />
+          </Routes>
+
           {/* </motion.div> */}
           <div className="cardHolder">
-            <Card title="About Me" click={() => { navigate("/about") }} />
-            <Card title="Projects" click={() => { navigate("/projects") }} />
-            <Card title="Experience" click={() => { navigate("/experience") }} />
-            <Card title="Poo" click={() => { navigate("/experience") }} />
+            <Routes>
+              <Route exact path="/" element={
+                <>
+                  <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={1} invis={false} />
+                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={2} invis={false} />
+                  <Card id="e" title="Experience" click={() => { navigate("/experience") }} xinit={3} xpos={3} invis={false} />
+                </>
+              } />
+              <Route exact path="about" element={
+                <>
+                  {/* <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={3} invis={true} /> */}
+
+                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={1} invis={false} />
+                  <Card id="e" title="Experience" click={() => { navigate("/experience") }} xinit={3} xpos={2} invis={false} />
+                </>
+              } />
+              <Route exact path="projects" element={
+                <>
+                  <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={1} invis={false} />
+                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={1} invis={true} />
+                  <Card title="Experience" click={() => { navigate("/experience") }} xinit={2} xpos={2} invis={false} />
+                </>
+              } />
+              <Route exact path="experience" element={
+                <>
+                  <Card title="About Me" click={() => { navigate("/about") }} invis={false} xinit={1} xpos={1}/>
+                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xpos={2} invis={false} />
+                  <Card title="Experience" click={() => { navigate("/experience") }} xpos={0} invis={true} />
+                </>
+              } />
+            </Routes>
+
           </div>
         </div>
       </div>

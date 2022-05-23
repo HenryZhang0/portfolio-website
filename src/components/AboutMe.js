@@ -9,12 +9,23 @@ const AboutMe = () => {
       exit={{ scaleY: 0 }}
       transition={{ duration: 0.5 }}>
       <div className="panel">
-        <div class = "text-one">Henry Zhang</div>
         <div className="title">
           About Me <hr></hr>
         </div>
-        <div className="main-content">
-          <div class="text-four">I'm a well rounded epic individual. I've done a lot of stuff and I'm actually really good at the exact thing you'd like me to do.</div>
+        <div className="about-content">
+          <div className="inner">
+            <div class="text-four">
+              Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+            </div>
+            <div class="text-four">
+              Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+            </div>
+            <div class="text-four">
+              Here are some of my skills:
+            </div>
+          </div>
+          <img src="/henry.jpg" width="30%" />
+
         </div>
       </div>
     </motion.div>
