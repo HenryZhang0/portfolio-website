@@ -13,6 +13,8 @@ import Homepage from "./components/Homepage.js";
 import Projector from "./components/Projector.js";
 import Pizza from "./components/Pizza.js";
 import Portalgun from "./components/Portalgun.js";
+import Keyboard from "./components/Keyboard.js";
+import Hologram from "./components/Hologram.js";
 import pika from './Pika_PNG.png'
 
 function App() {
@@ -46,7 +48,7 @@ function App() {
               <Route exact path="/" element={<></>} />
               <Route exact path="about" element={<Projector item={<Pizza/>} name = "pizza" id = "a"/>} />
               <Route exact path="projects" element={<Projector item={<Portalgun/>} name = "Portal gun" id = "aa"/>} />
-              <Route exact path="experience" element={<></>} />
+              <Route exact path="experience" element={<Projector item={<Keyboard/>} name = "Keyboard" />} />
             </Routes>
               
           {/* </motion.div> */}
@@ -54,6 +56,7 @@ function App() {
             <Card title="About Me" click={() => { navigate("/about") }} />
             <Card title="Projects" click={() => { navigate("/projects") }} />
             <Card title="Experience" click={() => { navigate("/experience") }} />
+            <Card title="Poo" click={() => { navigate("/experience") }} />
           </div>
         </div>
       </div>

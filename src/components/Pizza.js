@@ -22,7 +22,7 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/pizza.gltf')
   return (
-    <mesh ref={myMesh}>
+    <mesh ref={myMesh} position={[0, 0, -0]}>
 
     <group ref={group} {...props} dispose={null} scale={0.04} rotation={[-Math.PI / 1.6, 0, Math.PI]}>
       <group rotation={[-Math.PI / 2, 0, 0]}>

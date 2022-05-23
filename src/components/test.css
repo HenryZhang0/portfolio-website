@@ -1,6 +1,7 @@
 .text-one {
   font-size: 15px;
   color: var(--black-color);
+  color: #b5eadb;
 }
 .text-two {
   color: var(--black-color);
@@ -22,6 +23,7 @@
 } 
 .text-four {
   font-size:30px;
+  color: #fd8e32;
 }
 
 .heading {

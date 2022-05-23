@@ -5,6 +5,7 @@
 
 body {
   background-color:#eaffd0;
+  background-color: #121212;
 }
 .selector {
   user-drag: none;
@@ -37,13 +38,13 @@ body {
 .dot {
   height: 7px;
   width: 7px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
   margin: 9px;
 }
 .vl {
-  border-left: 2px solid black;
+  border-left: 2px solid white;
   height: 16vh;
 
   display: inline-block;
@@ -65,6 +66,7 @@ body {
   -webkit-transform: rotate(180deg);    
   font-family: 'Palanquin Dark', sans-serif;
   text-align: center;
+  color: white;
 }
 .right-section {
   display: flex;
@@ -87,6 +89,7 @@ body {
   height: 30vh;
   width: 100%;
   justify-content: center;
+  align-items: center;
   border: 0px solid red;
 }
 
@@ -95,11 +98,12 @@ hr{
   height: 10px;
   margin: 5px;
   margin-left: 70px;
-  background-color: red;
-
+  background-color: #fc4422;
+  border: 0px;
 }
 .contact {
-  border: 2px solid black;
+  color: white;
+  border: 2px solid white;
   border-radius: 10px;
   width: 60px;
   height: 30px;
@@ -115,7 +119,7 @@ hr{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: black;
+  color: white;
   font-family: "Raleway", sans-serif;
   font-size: 50px;
   font-weight: 800;

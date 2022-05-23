@@ -7,57 +7,68 @@ title: Rick and Morty - Portal Gun
 */
 
 import React, { useRef } from 'react'
+import { useFrame } from 'react-three-fiber'
 import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
+  const myMesh = React.useRef();
+
+  useFrame(({ clock }) => {
+    const a = clock.getElapsedTime();
+    myMesh.current.rotation.y = a;
+  });
+
+
   const group = useRef()
   const { nodes, materials } = useGLTF('/portalgun.gltf')
   return (
-    <group ref={group} {...props} dispose={null} scale={0.07}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
-        <group rotation={[Math.PI / 2, 0, 0]}>
-          <group position={[-47.32, 43.78, 0]} rotation={[0.91, 0.22, -1.14]}>
-            <mesh geometry={nodes.Subdivision_Surface_2_Material011_0.geometry} material={materials['Material.011']} />
-          </group>
-          <group position={[35.7, 9.23, 0]} rotation={[-Math.PI / 2, 0.4, Math.PI / 2]}>
-            <mesh geometry={nodes.Extrude_Material007_0.geometry} material={materials['Material.007']} />
-          </group>
-          <group position={[-47.29, -21.56, 0]}>
-            <mesh geometry={nodes.Capsule_Material002_0.geometry} material={materials['Material.002']} />
-          </group>
-          <group position={[-47.29, 0.7, 0]}>
-            <mesh geometry={nodes.Tube_Material003_0.geometry} material={materials['Material.003']} />
-          </group>
-          <group position={[27.46, 2.78, 0]}>
-            <mesh geometry={nodes.Cube_1_Material004_0.geometry} material={materials['Material.004']} />
-            <mesh geometry={nodes.Cube_1_Material006_0.geometry} material={materials['Material.006']} />
-          </group>
-          <group position={[27.46, 1.39, 0]}>
-            <mesh geometry={nodes.Cube_Material004_0.geometry} material={materials['Material.004']} />
-          </group>
-          <group position={[62.21, 7.1, 0]} rotation={[0, 0, -0.61]}>
-            <mesh geometry={nodes.Cube_2_Material005_0.geometry} material={materials['Material.005']} />
-          </group>
-          <group position={[69.09, -2.16, 0]} rotation={[0, 0, -0.44]}>
-            <mesh geometry={nodes.Cylinder_2_Material004_0.geometry} material={materials['Material.004']} />
-          </group>
-          <group position={[70.51, 0.9, 0]} rotation={[0, 0, -0.44]}>
-            <mesh geometry={nodes.Cylinder_1_Material004_0.geometry} material={materials['Material.004']} />
-          </group>
-          <group position={[-16.73, -14.05, 0]}>
-            <group position={[-94.77, 0, 30.76]} rotation={[0, 0, Math.PI / 2]}>
-              <mesh geometry={nodes.Cylinder_1_2_Material008_0.geometry} material={materials['Material.008']} />
+    <mesh ref={myMesh} scale = {0.3}>
+      <group ref={group} {...props} dispose={null} scale={0.07}>
+        <group rotation={[-Math.PI / 2, 0, 0]}>
+          <group rotation={[Math.PI / 2, 0, 0]}>
+            <group position={[-47.32, 43.78, 0]} rotation={[0.91, 0.22, -1.14]}>
+              <mesh geometry={nodes.Subdivision_Surface_2_Material011_0.geometry} material={materials['Material.011']} />
             </group>
-          </group>
-          <group position={[-111.51, -14.05, 0]} rotation={[0, 0, Math.PI / 2]}>
-            <mesh geometry={nodes.Cylinder_Material008_0.geometry} material={materials['Material.008']} />
-          </group>
-          <group position={[-22.29, -14.05, 0]}>
-            <mesh geometry={nodes.Subdivision_Surface_Material013_0.geometry} material={materials['Material.013']} />
+            <group position={[35.7, 9.23, 0]} rotation={[-Math.PI / 2, 0.4, Math.PI / 2]}>
+              <mesh geometry={nodes.Extrude_Material007_0.geometry} material={materials['Material.007']} />
+            </group>
+            <group position={[-47.29, -21.56, 0]}>
+              <mesh geometry={nodes.Capsule_Material002_0.geometry} material={materials['Material.002']} />
+            </group>
+            <group position={[-47.29, 0.7, 0]}>
+              <mesh geometry={nodes.Tube_Material003_0.geometry} material={materials['Material.003']} />
+            </group>
+            <group position={[27.46, 2.78, 0]}>
+              <mesh geometry={nodes.Cube_1_Material004_0.geometry} material={materials['Material.004']} />
+              <mesh geometry={nodes.Cube_1_Material006_0.geometry} material={materials['Material.006']} />
+            </group>
+            <group position={[27.46, 1.39, 0]}>
+              <mesh geometry={nodes.Cube_Material004_0.geometry} material={materials['Material.004']} />
+            </group>
+            <group position={[62.21, 7.1, 0]} rotation={[0, 0, -0.61]}>
+              <mesh geometry={nodes.Cube_2_Material005_0.geometry} material={materials['Material.005']} />
+            </group>
+            <group position={[69.09, -2.16, 0]} rotation={[0, 0, -0.44]}>
+              <mesh geometry={nodes.Cylinder_2_Material004_0.geometry} material={materials['Material.004']} />
+            </group>
+            <group position={[70.51, 0.9, 0]} rotation={[0, 0, -0.44]}>
+              <mesh geometry={nodes.Cylinder_1_Material004_0.geometry} material={materials['Material.004']} />
+            </group>
+            <group position={[-16.73, -14.05, 0]}>
+              <group position={[-94.77, 0, 30.76]} rotation={[0, 0, Math.PI / 2]}>
+                <mesh geometry={nodes.Cylinder_1_2_Material008_0.geometry} material={materials['Material.008']} />
+              </group>
+            </group>
+            <group position={[-111.51, -14.05, 0]} rotation={[0, 0, Math.PI / 2]}>
+              <mesh geometry={nodes.Cylinder_Material008_0.geometry} material={materials['Material.008']} />
+            </group>
+            <group position={[-22.29, -14.05, 0]}>
+              <mesh geometry={nodes.Subdivision_Surface_Material013_0.geometry} material={materials['Material.013']} />
+            </group>
           </group>
         </group>
       </group>
-    </group>
+    </mesh>
   )
 }
 

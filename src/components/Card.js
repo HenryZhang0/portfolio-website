@@ -18,7 +18,8 @@ const TitleText = {
     position: "absolute",
     top: "90%",
     left: "50%",
-    transform: "translate(-50%, -50%)"
+    transform: "translate(-50%, -50%)",
+    color: "white"
 }
 
 const Style = {
