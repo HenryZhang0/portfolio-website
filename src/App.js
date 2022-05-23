@@ -9,6 +9,8 @@ import Projects from "./components/Projects.js";
 import Content from "./components/Content.js";
 import Contact from "./components/Contact.js";
 import Experience from "./components/Experience.js";
+import Homepage from "./components/Homepage.js";
+import Model from "./components/Model.js";
 import pika from './Pika_PNG.png'
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
           <Contact></Contact>
           <div className="content" id="poo">
             <Routes>
-              <Route exact path="/" element={<h1>Home Page</h1>} />
+              <Route exact path="/" element={<Homepage />} />
               <Route exact path="about" element={<AboutMe />} />
               <Route exact path="projects" element={<Projects />} />
               <Route exact path="experience" element={<Experience />} />
@@ -34,7 +36,8 @@ function App() {
           <div className = "right-section">
 
           <div className="model">
-            <img src={pika} width="60%"></img>
+            {/* <img src={pika} width="60%"></img> */}
+            <Model></Model>
           </div>
           <div className="cardHolder">
             <Card title="About Me" click={() => {navigate("/about")}}/>

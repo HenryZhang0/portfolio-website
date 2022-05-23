@@ -1,0 +1,19 @@
+import React from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+
+const Homepage = () => {
+    return (
+        <motion.div
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            exit={{ scaleY: 0 }}
+            transition={{duration: 0.5}}>
+            <div className="panel">
+                Pick up and drop a card
+            </div>
+        </motion.div>
+
+    )
+}
+
+export default Homepage
