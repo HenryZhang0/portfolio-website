@@ -22,7 +22,7 @@ const TitleText = {
 }
 
 const Style = {
-    border: "2px solid coral",
+    border: "0px solid coral",
     position: "relative",
     textAlign: "center",
     height: "200px",
