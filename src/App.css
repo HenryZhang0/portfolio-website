@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color:#eaffd0;
+  background-color: #eaffd0;
   background-color: #121212;
 }
 .selector {
@@ -18,9 +18,9 @@ body {
 .content {
   display: flex;
   flex-direction: row;
-  width: 45vw;  
+  width: 55vw;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   padding-top: 20vh;
 }
 
@@ -54,7 +54,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.sbbottom{
+.sbbottom {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -63,15 +63,15 @@ body {
   padding-bottom: 1.6vw;
   writing-mode: vertical-rl; /**makes writing vertical**/
   text-orientation: mixed; /**orients text sideways**/
-  -webkit-transform: rotate(180deg);    
-  font-family: 'Palanquin Dark', sans-serif;
+  -webkit-transform: rotate(180deg);
+  font-family: "Palanquin Dark", sans-serif;
   text-align: center;
   color: white;
 }
 .right-section {
   display: flex;
   flex-direction: column;
-  width: 50vw;
+  width: 40vw;
 }
 .model {
   width: 100%;
@@ -82,17 +82,15 @@ body {
   justify-content: center;
   border: 0px solid red;
 }
- 
+
 .cardHolder {
-  display: flex;
-  flex-direction: row;
-  height: 30vh;
+  position: relative;
+  height: 20vh;
   width: 100%;
-  align-items: center;
   border: 0px solid red;
 }
 
-hr{
+hr {
   width: 15%;
   height: 10px;
   margin: 5px;
@@ -111,7 +109,7 @@ hr{
   border-radius: 4px;
   width: 80px;
   height: 35px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -130,4 +128,34 @@ hr{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0px 10px;
+  padding: 0px;
+  margin: 20px 0px 0px;
+  overflow: hidden;
+  list-style: none;
+}
+.skill-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 15px;
+    color: white;
+}
+.projection {
+  /* position: relative; */
+  position:fixed;
+}
+.holo-projector{
+  position: absolute;
+  width: 40vw;
+  
+}
+.holo-model{
+  width: 40vw;
+  position: absolute;
 }

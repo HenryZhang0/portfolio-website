@@ -7,10 +7,22 @@ const Projects = () => {
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
             exit={{ scaleY: 0 }}
-            transition={{duration: 0.5}}>
-            <div className="panel">
-                Projects
-                these are a bunch of projects
+            transition={{ duration: 0.5 }}
+            className="panel"
+        >
+            <div className="title">
+                Projects <hr></hr>
+            </div>
+            <div className="about-content">
+                <div className="inner">
+
+                    <div class="text-four">
+                        I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun.
+                    </div>
+
+
+                </div>
+
             </div>
         </motion.div>
 

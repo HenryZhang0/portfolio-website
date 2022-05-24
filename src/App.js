@@ -1,7 +1,7 @@
 import "./App.css";
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { BrowserRouter as Router, Route, Routes, Link, useNavigate, useLocation } from 'react-router-dom';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import Card from "./components/Card.js";
 import Leftsidebar from "./components/Leftsidebar";
 import AboutMe from "./components/AboutMe.js";
@@ -16,6 +16,11 @@ import Portalgun from "./components/Portalgun.js";
 import Keyboard from "./components/Keyboard.js";
 import Hologram from "./components/Hologram.js";
 import pika from './Pika_PNG.png'
+import cassette from './cassette.png'
+import cartridge from './cartridge.png'
+import usb from './usb.png'
+import harddrive from './harddrive.png'
+
 
 function App() {
   const changePanel = (newPanel) => {
@@ -23,72 +28,83 @@ function App() {
     element.innerHTML = <>newPanel</>
   }
   const navigate = useNavigate();
-
+  const location = useLocation();
   return (
-    <AnimatePresence exitBeforeEnter >
-      <div className="App">
-        <Leftsidebar></Leftsidebar>
-        {/* <Contact></Contact> */}
-        <div className="content" id="poo">
-          <Routes>
+
+    <div className="App">
+      <Leftsidebar></Leftsidebar>
+      {/* <Contact></Contact> */}
+      <div className="content">
+        <AnimatePresence exitBeforeEnter initial={false} >
+          <Routes key={location.pathname} location={location}>
             <Route exact path="/" element={<Homepage />} />
             <Route exact path="about" element={<AboutMe />} />
             <Route exact path="projects" element={<Projects />} />
             <Route exact path="experience" element={<Experience />} />
+            <Route exact path="contact" element={<Contact />} />
           </Routes>
-        </div>
-        <div className="right-section">
+        </AnimatePresence>
+      </div>
+      <div className="right-section">
 
-          {/* <motion.div
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 1 }}
-            exit={{ scaleY: 0 }}
-            transition={{ duration: 0.5 }}>*/}
-          <Routes>
-            <Route exact path="/" element={<Projector />} />
-            <Route exact path="about" element={<Projector item={<Pizza />} name="pizza" id="a" />} />
-            <Route exact path="projects" element={<Projector item={<Portalgun />} name="Portal gun" id="aa" />} />
-            <Route exact path="experience" element={<Projector item={<Keyboard />} name="Keyboard" />} />
-          </Routes>
+        <Routes>
 
-          {/* </motion.div> */}
-          <div className="cardHolder">
-            <Routes>
+          <Route exact path="/" element={<Projector />} />
+          <Route exact path="about" element={<Projector item={<Pizza />} name="pizza" id="a" />} />
+          <Route exact path="projects" element={<Projector item={<Portalgun />} name="Portal gun" id="aa" />} />
+          <Route exact path="experience" element={<Projector item={<Keyboard />} name="Keyboard" />} />
+          <Route exact path="contact" element={<Projector name="Contact" />} />
+        </Routes>
+
+        {/* <div className="cardHolder"> */}
+          <AnimatePresence exitBeforeEnter>
+            <Routes key={location.pathname} location={location}>
               <Route exact path="/" element={
-                <>
-                  <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={1} invis={false} />
-                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={2} invis={false} />
-                  <Card id="e" title="Experience" click={() => { navigate("/experience") }} xinit={3} xpos={3} invis={false} />
-                </>
+                <div className="cardHolder">
+                  <Card title="About Me" img={cassette} click={() => { navigate("/about") }} order={0}/>
+                  <Card title="Projects" img={cartridge} click={() => { navigate("/projects") }} order={1}/>
+                  <Card title="Experience" img={usb} click={() => { navigate("/experience") }} order={2}/>
+                  <Card title="Contact" img={harddrive} click={() => { navigate("/contact") }} order={3}/>
+                </div>
               } />
               <Route exact path="about" element={
-                <>
-                  {/* <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={3} invis={true} /> */}
-
-                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={1} invis={false} />
-                  <Card id="e" title="Experience" click={() => { navigate("/experience") }} xinit={3} xpos={2} invis={false} />
-                </>
+                <div className="cardHolder">
+                  
+                  <Card title="Projects" img={cartridge} click={() => { navigate("/projects") }} order={0}/>
+                  <Card title="Experience" img={usb} click={() => { navigate("/experience") }} order = {1}/>
+                  <Card title="Contact" img={harddrive} click={() => { navigate("/contact") }} order = {2}/>
+                  <Card title="Home" click={() => { navigate("/") }} order={3}/>
+                </div>
               } />
               <Route exact path="projects" element={
-                <>
-                  <Card id="am" title="About Me" click={() => { navigate("/about") }} xinit={1} xpos={1} invis={false} />
-                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xinit={2} xpos={1} invis={true} />
-                  <Card title="Experience" click={() => { navigate("/experience") }} xinit={2} xpos={2} invis={false} />
-                </>
+                <div className="cardHolder">
+                  <Card title="About Me" img={cassette} click={() => { navigate("/about") }} order={0}/>
+                  <Card title="Experience" img={usb} click={() => { navigate("/experience") }} order={1}/>
+                  <Card title="Contact" img={harddrive} click={() => { navigate("/contact") }} order = {2}/>
+                  <Card title="Home" click={() => { navigate("/") }} order={3}/>
+                </div>
               } />
               <Route exact path="experience" element={
-                <>
-                  <Card title="About Me" click={() => { navigate("/about") }} invis={false} xinit={1} xpos={1}/>
-                  <Card id="p" title="Projects" click={() => { navigate("/projects") }} xpos={2} invis={false} />
-                  <Card title="Experience" click={() => { navigate("/experience") }} xpos={0} invis={true} />
-                </>
+                <div className="cardHolder">
+                  <Card title="About Me" img={cassette} click={() => { navigate("/about") }} order={0}/>
+                  <Card title="Projects" img={cartridge} click={() => { navigate("/projects") }} order={1}/>
+                  <Card title="Contact" img={harddrive} click={() => { navigate("/contact") }} order = {2}/>
+                  <Card title="Home" click={() => { navigate("/") }} order={3}/>
+                </div>
+              } />
+              <Route exact path="contact" element={
+                <div className="cardHolder">
+                  <Card title="About Me" img={cassette} click={() => { navigate("/about") }} order={0}/>
+                  <Card title="Projects" img={cartridge} click={() => { navigate("/projects") }} order={1}/>
+                  <Card title="Experience" img={usb} click={() => { navigate("/experience") }} order={2}/>
+                  <Card title="Home" click={() => { navigate("/") }} order={3}/>
+                </div>
               } />
             </Routes>
-
-          </div>
-        </div>
+          </AnimatePresence>
+        {/* </div> */}
       </div>
-    </AnimatePresence>
+    </div>
   );
 }
 
