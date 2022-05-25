@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d04ee40.css",
-    "main.js": "/static/js/main.7b6de53d.js",
-    "static/media/hologram.gltf": "/static/media/hologram.2087fe74e4f88b37003f.gltf",
-    "static/media/henry.jpg": "/static/media/henry.a99d5d2b05d42d5724f7.jpg",
-    "static/media/pizza.gltf": "/static/media/pizza.82fbae65f98860d7e465.gltf",
-    "static/media/cassette.png": "/static/media/cassette.082597aec39ec645c730.png",
-    "static/media/harddrive.png": "/static/media/harddrive.6d272382bfa7d5374dbf.png",
-    "static/media/cartridge.png": "/static/media/cartridge.35d779fdef3889b5de17.png",
-    "static/media/usb.png": "/static/media/usb.ad0cfb0ce66e6b0c89f3.png",
-    "static/media/Pika_PNG.png": "/static/media/Pika_PNG.1bab068e34e99a090fce.png",
-    "static/media/cardBack.png": "/static/media/cardBack.d3b10aef314182e58941.png",
-    "index.html": "/index.html",
-    "main.6d04ee40.css.map": "/static/css/main.6d04ee40.css.map",
-    "main.7b6de53d.js.map": "/static/js/main.7b6de53d.js.map"
+    "main.css": "/portfolio-website/static/css/main.6d04ee40.css",
+    "main.js": "/portfolio-website/static/js/main.53124385.js",
+    "static/media/hologram.gltf": "/portfolio-website/static/media/hologram.2087fe74e4f88b37003f.gltf",
+    "static/media/henry.jpg": "/portfolio-website/static/media/henry.a99d5d2b05d42d5724f7.jpg",
+    "static/media/pizza.gltf": "/portfolio-website/static/media/pizza.82fbae65f98860d7e465.gltf",
+    "static/media/cassette.png": "/portfolio-website/static/media/cassette.082597aec39ec645c730.png",
+    "static/media/harddrive.png": "/portfolio-website/static/media/harddrive.6d272382bfa7d5374dbf.png",
+    "static/media/cartridge.png": "/portfolio-website/static/media/cartridge.35d779fdef3889b5de17.png",
+    "static/media/usb.png": "/portfolio-website/static/media/usb.ad0cfb0ce66e6b0c89f3.png",
+    "static/media/Pika_PNG.png": "/portfolio-website/static/media/Pika_PNG.1bab068e34e99a090fce.png",
+    "static/media/cardBack.png": "/portfolio-website/static/media/cardBack.d3b10aef314182e58941.png",
+    "index.html": "/portfolio-website/index.html",
+    "main.6d04ee40.css.map": "/portfolio-website/static/css/main.6d04ee40.css.map",
+    "main.53124385.js.map": "/portfolio-website/static/js/main.53124385.js.map"
   },
   "entrypoints": [
     "static/css/main.6d04ee40.css",
-    "static/js/main.7b6de53d.js"
+    "static/js/main.53124385.js"
   ]
 }
