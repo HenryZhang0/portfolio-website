@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { Effects, OrbitControls, useGLTF } from '@react-three/drei'
 import Pizza from './Pizza.js'
 import Portalgun from './Portalgun.js'
-import { EffectComposer, DepthOfField, Bloom, Noise, Vignette, Grid } from '@react-three/postprocessing'
+import { EffectComposer, DepthOfField, Bloom, Noise, Glitch, Vignette, Grid } from '@react-three/postprocessing'
 import { Color, Vector3 } from "three"
 import { useControls } from 'leva'
 import Hologram from "./Hologram.js";
@@ -59,6 +59,7 @@ const Model = ({ item }) => {
                         <Noise opacity={0.02} />
                         {/* <Vignette eskil={false} offset={0.1} darkness={1.1} /> */}
                         <Grid />
+                        {/* <Glitch delay={0.5}/> */}
                     </EffectComposer>
                 </Canvas >
             </div>
