@@ -4,9 +4,9 @@ const Leftsidebar = () => {
   return (
     <div className="leftsidebar">
     <div className="sbtop">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
       <div className="vl"></div>
     </div>
     <div className="sidetextl">
@@ -14,9 +14,9 @@ const Leftsidebar = () => {
     </div>
     <div className="sbbottom">
       <div className="vl"></div>
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
     </div>
   </div>
   )

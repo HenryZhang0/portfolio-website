@@ -119,15 +119,34 @@ hr {
   display: flex;
   flex-direction: column;
   width: 40vw;
-  height: 60vh;
-  border: 0px solid red;
-  background-color: ;
+  height: 60vh;  
+  border: 1px solid white;
+  border-radius: 7px;
+  padding: 20px;
+  background-color: rgb(7, 7, 27);
+}
+#rotateDiv {
+  transform: rotateY(10deg);
+
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.about-content{
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+.inner {
+  width: 60%
+}
+.photo {
+  width: 40%;
 }
 
 .skills-list {

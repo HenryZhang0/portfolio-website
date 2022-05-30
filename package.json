@@ -1,5 +1,5 @@
 {
-  "homepage": "http://HenryZhang0.github.io/portfolio-website",
+  "homepage": "https://HenryZhang0.github.io/portfolio-website/",
   "name": "portfolio-website",
   "version": "0.1.0",
   "private": true,
@@ -19,13 +19,12 @@
     "leva": "^0.9.27",
     "path": "^0.12.7",
     "react": "^18.1.0",
-    "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^18.1.0",
     "react-postprocessing": "^1.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-three-fiber": "^6.0.13",
-    "three": "^0.140.2",
+    "three": "^0.141.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -56,7 +56,7 @@ function App() {
           <Route exact path="contact" element={<Projector name="Contact" />} />
         </Routes>
 
-        {/* <div className="cardHolder"> */}
+        <div className="cardHolder">
           <AnimatePresence exitBeforeEnter>
             <Routes key={location.pathname} location={location}>
               <Route exact path="/" element={
@@ -102,7 +102,7 @@ function App() {
               } />
             </Routes>
           </AnimatePresence>
-        {/* </div> */}
+        </div> 
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ title: PIZZA
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from 'react-three-fiber'
+import p from '../pizza.gltf'
 
 export default function Model({ ...props }) {
 
@@ -20,7 +21,7 @@ export default function Model({ ...props }) {
   });
 
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pizza.gltf')
+  const { nodes, materials } = useGLTF(p)
   return (
     <mesh ref={myMesh} position={[0, 0, -0]}>
 

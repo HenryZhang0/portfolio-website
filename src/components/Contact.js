@@ -14,7 +14,7 @@ const Contact = (onclick) => {
       </div>
       <div className="about-content">
         <div className="inner">
-          <div class="text-four">
+          <div className="text-four">
             As previously mentioned, I am always open to new learning opportunities and would love to connect!
           </div>
         </div>

@@ -16,7 +16,7 @@ const Projects = () => {
             <div className="about-content">
                 <div className="inner">
 
-                    <div class="text-four">
+                    <div className="text-four">
                         I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun. I make projects for fun.
                     </div>
 
